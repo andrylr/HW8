@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">  
+    <link rel="stylesheet" type="text/css" href="assignment_8.css">
+    <title>Assignment 7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  File:  /~alora/assignment_8.html
+    91.461 Assignment:8
+    Andry Lora, UMass Lowell Computer Science, Andrylr@gmail.com
+    Copyright (c) 2015 by Andry Lora.  All rights reserved.  
+    File created:October 14,2015
+    updated by Andry Lora on November 19, 2015
+        -->
+
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="assignment_8.js"></script>
+    
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+ 
+
+
+</head>
+<body>
+    <!--Create an id call index which will be used to navigate back to the 
+        index page-->
+        <div id="index"><a href="http://weblab.cs.uml.edu/~alora/index.html">Home</a></div>
+
+<!--Created a div for the header to change the text or move as wanted in the css file -->
+        <div id="header"><h1>91.461 Using the jQuery UI Slider and Tab Widgets</h1></div>
+
+        <!-- This section acts as the instruction for the users so they can input the values in properly -->
+        <div id="instructions">Enter lower value first then higher value,if end
+            values are greater than 10,or start value is less than 1 table will not be created and if larger value is inputed first the table will not be created.
+        </div>
+        <br>
+
+        <!--This is the form for the input of ranges for the the multiplicand and the 
+        multiplier.At the bottom there is onclick for the button which when clicked calls the TableStart function. -->
+        <form id="valueinput">
+            multiplier start: <input type="text" name="row_start" id="row_start">
+            <div id="sliderRstart"></div>
+            <br>
+            multiplier end:<input type="text" name="row_end" id="row_end">
+            <div id="sliderRend"></div>
+            <br>
+            multiplicand start: <input type="text" name="column_start" id="column_start">
+            <div id="sliderCstart"></div>
+            <br>
+            multiplicand end:<input type="text" name="column_end" id="column_end">
+            <div id="sliderCend"></div>
+            <br>
+           <!-- <div id="slider"></div>-->
+        </form>
+        <p>Click "Submit" to generate table.</p>
+        <!--<div id="clicking"><input type="button" value="submit"></div>-->
+
+        <!-- The if statement from the onclick came from https://forum.jquery.com/topic/jquery-form-validation-add-a-method-after-complete which only calls the creation of the table
+        if the validation of the form is a success -->
+        <div id="clicking"><input type="button" value=" submit " onClick="if( $('#valueinput').valid() == true){ TableStart(); }"></div>
+
+        <div id="errors"></div>
+        <!-- dynamic content comming from javascript   onclick="TableStart()" -->
+         <div id="tabs">
+          <!-- Tabs -->
+          <ul class="tabs">
+          </ul>
+        </div>
+
+        
+       
+</body>
+</html>
