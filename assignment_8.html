@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">  
     <link rel="stylesheet" type="text/css" href="assignment_8.css">
-    <title>Assignment 7</title>
+    <title>Assignment 8</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--  File:  /~alora/assignment_8.html
@@ -68,12 +68,20 @@
 
         <div id="errors"></div>
         <!-- dynamic content comming from javascript   onclick="TableStart()" -->
-	<div id="table"></div>
-         <div id="tabs">
-          <!-- Tabs -->
-          <ul class="tabs">
-          </ul>
+	
+ <!--<div id="table"></div>-->
+
+<!--inserting the dynamically created table inside a tab -->
+<div id="tabs">
+        <ul>
+        <li><a href="#tabs-1">Table 1</a></li>
+        <div id="tabs-1">
+        <!--dynamic table-->
+        <div id="table">
         </div>
+        </div>
+        </div>
+       
 
         
        

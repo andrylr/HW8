@@ -104,6 +104,9 @@ $("#valueinput").validate({
 }
         });
 
+/* Creating the sliders using set conditions for min and max and updating the slider based
+on the input from the form and updating the form box based on the slider and before creating
+the table dynamically checking if it passes all the validations*/
 //ROW START
 $("#sliderRstart").slider({
     value: 10,
@@ -192,13 +195,10 @@ $("#column_end").change(function () {
   });
 
 
-/*http://jqueryui.com/tabs/#manipulation*/
+/* Creating a tab using the method described in http://jqueryui.com/tabs/#manipulation*/
 
- $("#tabs").tabs();
-
-
-
-
+ 
+$( "#tabs" ).tabs();
     });
 
 

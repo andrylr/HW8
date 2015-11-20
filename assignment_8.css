@@ -106,9 +106,21 @@ input.error{
 
 /*http://stackoverflow.com/questions/14997990/change-jquery-ui-slider-size*/
 
-#slider{
+/*#slider{
 float:right;  
-}
-.ui-slider-horizontal {
+}*/
+/*.ui-slider-horizontal {
     width: 200px;
+    position: relative;
 }
+
+.ui-slider .ui-slider-handle {width:2em;left:-.6em;text-decoration:none;text-align:center;}
+
+#sliderRstart {
+  text-align: center;
+}
+*/
+.ui-slider-horizontal{        
+  width: 200px;
+  display: inline-block;
+}         
